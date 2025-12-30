@@ -1,0 +1,285 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 容器样式 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 头部样式 */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.logo span {
+    font-size: 1rem;
+    color: #f0c888;
+    margin-left: 0.5rem;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin-left: 2rem;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a.active,
+.nav a:hover {
+    color: #f0c888;
+}
+
+/* 轮播图样式 */
+.carousel-section {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 轮播按钮样式 */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* 轮播指示器样式 */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #f0c888;
+}
+
+/* 通用板块样式 */
+.intro-section,
+.types-section,
+.heritage-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #f0c888;
+    margin: 1rem auto 0;
+}
+
+/* 介绍区域样式 */
+.intro-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content p {
+    margin-bottom: 1rem;
+}
+
+/* 种类区域样式 */
+.types-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.type-item {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.type-item:hover {
+    transform: translateY(-5px);
+}
+
+.type-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.type-item p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* 非遗传承区域样式 */
+.heritage-section {
+    background-color: #f0f0f0;
+}
+
+.heritage-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav li {
+        margin: 0.5rem 1rem;
+    }
+
+    .carousel-section {
+        height: 300px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+/*木偶戏种类区域*/
+/* 木偶种类图片样式 */
+.type-img {
+    margin-top: 1rem;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.type-img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 保持图片比例并填充容器 */
+    transition: transform 0.3s ease;
+}
+.type-item:hover .type-img img {
+    transform: scale(1.05); /* 鼠标悬浮时图片轻微放大 */
+}

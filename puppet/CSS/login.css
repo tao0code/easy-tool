@@ -1,0 +1,142 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 页面背景：木偶戏图片+渐变，营造非遗氛围 */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 背景图使用木偶戏相关图片，可替换为你自己的图片 */
+    background: linear-gradient(rgba(51, 33, 22, 0.85), rgba(51, 33, 22, 0.95)),
+    url("../img/7.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* 核心登录框样式：居中+阴影+圆角 */
+.login-box {
+    width: 90%;
+    max-width: 420px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.4);
+}
+
+/* 登录logo区域：木偶戏风格图标+文字 */
+.login-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #8B4513; /* 木质棕色，贴合木偶戏的木质质感 */
+}
+
+.login-logo i {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.login-logo h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* 表单整体样式 */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* 表单输入项样式 */
+.form-item {
+    position: relative;
+    border-bottom: 2px solid #f0e6d8; /* 浅木色边框 */
+}
+
+.form-item label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B4513;
+    font-size: 1.2rem;
+}
+
+.form-item input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1rem 0 1rem 2rem; /* 左边留空给图标 */
+    font-size: 1rem;
+    background: transparent;
+    color: #333;
+}
+
+.form-item input::placeholder {
+    color: #999;
+}
+
+/* 表单选项：记住我+忘记密码 */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.remember {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.forgot {
+    color: #8B4513;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* 登录按钮：木偶戏主色调 */
+.login-btn {
+    padding: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #8B4513; /* 深木色主色调 */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #6d3310; /* hover加深色调 */
+}
+
+/* 响应式适配：移动端优化 */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .login-logo i {
+        font-size: 2.5rem;
+    }
+
+    .login-logo h2 {
+        font-size: 1.8rem;
+    }
+}
