@@ -1,0 +1,6 @@
+使用方法
+
+gray.exe -photo 图片原始路径 -save  生成的图片保存路径
+
+例如：
+gray.exe -photo "D:\软件 \python\Scripts\coode\ee\2.jpg"-save "D:\3.jpg
